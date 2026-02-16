@@ -69,46 +69,53 @@
 
 
   // Publications filter tabs (All / First Author / Full Paper / Poster / Preprint)
-  const pubFilterBtns = document.querySelectorAll("[data-pub-filter]");
-  const pubItems = document.querySelectorAll("[data-pub-item]");
-  const pubEmpty = document.getElementById("pubEmpty");
+  // Publications filter tabs (All / First Author / Full Paper / Poster / Preprint)
+const pubFilterBtns = Array.from(document.querySelectorAll("[data-pub-filter]"));
+const pubItems = Array.from(document.querySelectorAll("[data-pub-item]"));
+const pubEmpty = document.getElementById("pubEmpty");
 
-  function applyPubFilter(filter) {
-    let visible = 0;
-    pubItems.forEach((item) => {
-      const types = (item.getAttribute("data-type") || "").split(/\s+/).filter(Boolean);
-      const isFirst = (item.getAttribute("data-first") || "false") === "true";
+function applyPubFilter(filter) {
+  let visible = 0;
 
-      let show = false;
-      if (filter === "all") show = true;
-      else if (filter === "first") show = isFirst;
-      else show = types.includes(filter);
+  pubItems.forEach((item) => {
+    const types = (item.getAttribute("data-type") || "")
+      .toLowerCase()
+      .split(/\s+/)
+      .filter(Boolean);
 
-      item.hidden = !show;
-      if (show) visible += 1;
-    });
+    const isFirst = (item.getAttribute("data-first") || "false").toLowerCase() === "true";
 
-    if (pubEmpty) pubEmpty.hidden = visible !== 0;
-  }
+    let show = false;
+    if (filter === "all") show = true;
+    else if (filter === "first") show = isFirst;
+    else show = types.includes(filter);
 
-  if (pubFilterBtns.length && pubItems.length) {
-    pubFilterBtns.forEach((b) => {
-      b.addEventListener("click", () => {
-        const filter = b.getAttribute("data-pub-filter") || "all";
+    item.style.display = show ? "" : "none";
+    if (show) visible += 1;
+  });
 
-        pubFilterBtns.forEach((x) => {
-          const active = x === b;
-          x.classList.toggle("is-active", active);
-          x.setAttribute("aria-selected", active ? "true" : "false");
-        });
+  if (pubEmpty) pubEmpty.hidden = visible !== 0;
+}
 
-        applyPubFilter(filter);
+if (pubFilterBtns.length && pubItems.length) {
+  pubFilterBtns.forEach((b) => {
+    b.addEventListener("click", () => {
+      const filter = (b.getAttribute("data-pub-filter") || "all").toLowerCase();
+
+      pubFilterBtns.forEach((x) => {
+        const active = x === b;
+        x.classList.toggle("is-active", active);
+        x.setAttribute("aria-selected", active ? "true" : "false");
       });
-    });
 
-    // Default
-    applyPubFilter("all");
-  }
+      applyPubFilter(filter);
+    });
+  });
+
+  // Default: use whichever is-active, otherwise all
+  const activeBtn = pubFilterBtns.find((x) => x.classList.contains("is-active"));
+  applyPubFilter(activeBtn ? activeBtn.getAttribute("data-pub-filter") : "all");
+}
 
   // --- Project image lightbox ---
 (() => {
