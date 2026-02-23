@@ -381,6 +381,8 @@ h2 {
   margin: 10px 0;
 }
 
+
+
 .tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
 .tag {
   border: 1px solid var(--border);
@@ -389,6 +391,15 @@ h2 {
   color: var(--muted);
 }
 
+.text-link {
+  color: #5b5fc7;   /* muted indigo */
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.text-link:hover {
+   border-bottom: 1px solid #5b5fc7;
+}
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 22px 0;
@@ -399,6 +410,7 @@ h2 {
   gap: 12px;
   flex-wrap: wrap;
 }
+
 
 /* Responsive */
 @media (min-width: 820px) {
