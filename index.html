@@ -4,21 +4,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hyerim Park | Human–AI Interaction Researcher</title>
-
-  <!-- Basic SEO -->
-  <meta name="description" content="Hyerim Park — Human–AI Interaction Researcher. Industrial PhD Candidate at BMW Group · HCI Group, University of Stuttgart
-" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Hyerim Park | Human–AI Interaction Researcher" />
+  <title>Hyerim Park | UX Researcher & Interaction Designer for AI Systems</title>
+  <meta name="description"
+    content="Hyerim Park is a UX researcher and interaction designer for AI systems, specializing in multimodal interaction, prototyping, and human–AI workflows." />
+  <meta property="og:title" content="Hyerim Park | UX Researcher & Interaction Designer for AI Systems" />
   <meta property="og:description"
-    content="Hyerim Park — Human–AI Interaction Researcher. Research on multimodal interaction and generative AI in professional design workflows." />
+    content="Human-centered AI experiences through UX research, interaction design, and prototyping." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hyerim-park.com/" />
-
   <link rel="icon" href="assets/home.png" type="image/png" />
-  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="stylesheet" href="homepage.css" />
 </head>
 
 <body>
@@ -31,13 +36,11 @@
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#service">Service</a>
-        <!-- CV is commented out for now; you can re-enable it later. -->
-        <!-- <a href="#cv">CV</a> -->
-        <!-- <a href="#contact">Contact</a>-->
+        <a href="index.html#about" aria-current="page">About</a>
+        <!-- <a href="work.html">Work</a> -->
+        <a href="work.html">Work</a>
+        <a href="publications.html">Research</a>
+        <a href="assets/pdf/cv.pdf" target="_blank" rel="noreferrer">Resume</a>
       </nav>
 
       <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme"><span
@@ -46,31 +49,30 @@
   </header>
 
   <main id="main">
-
     <section id="top" class="hero hero-simple">
       <div class="container hero-simple-inner">
         <figure class="avatar avatar-inline" aria-label="Profile photo">
           <img class="avatar-img" src="assets/profile.png" alt="Hyerim Park portrait" />
         </figure>
 
-        <div class="hero-simple-copy">
+        <div class="hero-simple-copy hero-home-copy">
           <h1 class="title title-tight">Hyerim Park</h1>
-          <p class="subtitle">
-            Human–AI Interaction Researcher<br />
-            PhD Candidate at BMW Group · HCI Group, University of Stuttgart
+          <p class="subtitle hero-subtitle-compact">
+            Human–AI Interaction · UX Research · Interaction Design
+            <!-- Designing human-centered AI experiences through research, interaction design, and prototyping. Focus on multimodal interaction, creative workflows, and immersive systems -->
           </p>
-
+          <p class="hero-signal">Human–AI interaction · Multimodal interfaces · Prototyping · AI UX · User research</p>
           <div class="icon-row" aria-label="Primary links">
-            <a class="icon-link" href="https://scholar.google.com/citations?user=n5RobrsAAAAJ&amp;hl=en" target="_blank"
-              rel="noreferrer" aria-label="Google Scholar">
+            <a class="icon-link icon-link-circle"
+              href="https://scholar.google.com/citations?user=n5RobrsAAAAJ&amp;hl=en" target="_blank" rel="noreferrer"
+              aria-label="Google Scholar">
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="currentColor" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3z" />
                 <path fill="currentColor" d="M5 13v4.5C5 18.88 8.13 20 12 20s7-1.12 7-2.5V13l-7 3.82L5 13z" />
               </svg>
             </a>
-
-            <a class="icon-link" href="https://linkedin.com/in/hpark-hci" target="_blank" rel="noreferrer"
-              aria-label="LinkedIn">
+            <a class="icon-link icon-link-circle" href="https://linkedin.com/in/hpark-hci" target="_blank"
+              rel="noreferrer" aria-label="LinkedIn">
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="3" fill="none" stroke="currentColor"
                   stroke-width="1.8" />
@@ -80,10 +82,8 @@
                   d="M11 10.4h2.2v1.2c.6-.9 1.6-1.5 3-1.5 2.6 0 3.8 1.7 3.8 4.4v4.3h-2.2v-4c0-1.7-.7-2.7-2.1-2.7-1.4 0-2.4 1-2.4 2.8v3.9H11v-8.4z" />
               </svg>
             </a>
-
-            <!-- Optional email icon:
-                 Replace the value below with your email. Note that putting a raw email address on a public site may attract spam. -->
-            <button class="icon-link" type="button" data-copy="hpark.hci@gmail.com" aria-label="Copy email">
+            <button class="icon-link icon-link-circle" type="button" data-copy="h.park.de@gmail.com"
+              aria-label="Copy email">
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="4" y="6.5" width="16" height="11" rx="2" fill="none" stroke="currentColor"
                   stroke-width="1.8" />
@@ -94,33 +94,44 @@
           </div>
 
 
-
-          <p class="lede">
-            I am a fourth-year Industrial PhD candidate at BMW Group and a member of the
+          <!-- <p class="lede">
+            I am a fourth-year industrial PhD candidate at BMW Group and a member of the
             <a href="https://visvar.github.io/" target="_blank" rel="noreferrer" class="text-link">
               HCI Group at the University of Stuttgart
             </a>.
+            (supervised by <strong>Prof. Michael Sedlmair</strong>, <strong>Dr. Andre Luckow</strong>, and <strong>Dr. Malin Eiband</strong>).
             My work focuses on designing interaction methods for generative AI in professional design
             practice. I develop intuitive AI systems that augment human creativity and professional capabilities. My
             research explores multimodal interaction techniques beyond text-only prompting, enabling designers to better
             express creative intent and improve efficiency, usability, and control across real-world 2D and immersive VR
             workflows.
+          </p> -->
+
+          <p class="lede">
+            I am a fourth-year industrial PhD candidate at BMW Group and a member of the
+            <a href="https://visvar.github.io/" target="_blank" rel="noreferrer" class="text-link">
+              HCI Group at the University of Stuttgart</a>, supervised by <strong>Prof. Michael Sedlmair</strong>,
+            <strong>Dr. Andre Luckow</strong>, and <strong>Dr. Malin Eiband</strong>.
+            My work focuses on interaction design for generative AI in professional design practice, with an emphasis on
+            multimodal interaction beyond text-only prompting. I design and prototype AI systems that help users express
+            intent more naturally and work more effectively across 2D and immersive workflows.
           </p>
 
+
+
+          <!-- <p class="lede">
+            I design and study how people interact with AI systems, especially in complex, creative, and multimodal environments across web and immersive platforms. My work connects UX research, interaction design, and prototyping to create interfaces that help users understand, control, and collaborate with AI.
+          </p> -->
 
 
           <div class="callout" role="note" aria-label="Job market status">
             <span aria-hidden="true">📣</span>
             <div>
-              <strong>Currently exploring research opportunities.</strong>
-              <span class="callout-muted">
-                Interested in roles across industry and academia in human–AI interaction/collaboration, human-centered
-                design of AI-assisted systems, multimodal interfaces, interactive generative technologies, and
-                user-centered empirical research.
-              </span>
+              <strong>Currently exploring roles in UX research, interaction design, and human–AI systems.</strong>
+              <span class="callout-muted">Especially interested in AI-assisted systems, multimodal interfaces,
+                creativity support tools, and human-centered product design.</span>
             </div>
           </div>
-
 
           <div class="news" aria-label="Recent news">
             <h3 class="subhead">Recent News</h3>
@@ -128,9 +139,9 @@
               <li>
                 <span class="news-date">Apr 2026</span>
                 <span class="news-text">
-                  I will present our paper “Interaction Methods in Generative AI Image Tools” at <strong>CHI
+                  I will present our research <i>“Interaction Methods in Generative AI Image Tools”</i> at <strong>CHI
                     2026</strong> (Barcelona, Spain).
-                  <a href="#publications">See publications</a>
+                  <a href="publications.html">See publications</a>
                 </span>
               </li>
 
@@ -138,515 +149,289 @@
                 <span class="news-date">Mar 2026</span>
                 <span class="news-text">
                   I will present two papers at <strong>IUI 2026</strong> (Paphos, Cyprus).
-                  <a href="#publications">See publications</a>
+                  <a href="publications.html">See publications</a>
                 </span>
               </li>
-
-
-
               <!--    <li><span class="news-date">2025</span> <span class="news-text">Published a generative AI–driven VR texturing tool at <strong>EICS 2025</strong>. <a href="#pub-eics-2025">Paper</a></span></li>-->
               <!--   <li><span class="news-date">2024</span> <span class="news-text">Published a thematic analysis of professional designers’ use of GenAI image tools at <strong>NordicCHI 2024</strong>. <a href="#pub-nordichi-2024-visual-thinkers">Paper</a></span></li> -->
             </ul>
           </div>
         </div>
       </div>
+      </div>
+      </div>
+
     </section>
+
+
+
     <section id="about" class="section">
       <div class="container">
         <h2>About</h2>
         <div class="prose">
           <p>
-            My work lies at the intersection of
-            <span class="highlight">human–AI interaction</span>,
-            <span class="highlight">generative AI</span>, and <span class="highlight">professional design
-              workflows</span> across 2D and immersive VR
-            interfaces.
-            I <span class="highlight">identify user needs, develop interaction concepts, implement functional
-              prototypes, and evaluate them
-              through iterative design processes.</span>
-            I translate findings into actionable design implications and share them with research communities and
-            interdisciplinary stakeholders in industry.
+            I work at the intersection of <span class="highlight">human–AI interaction</span>, <span
+              class="highlight">generative AI</span>, and <span class="highlight">UX research & design</span> across web
+            and immersive environments. I study how people interact with AI systems in creative and professional
+            workflows, and translate those insights into interaction concepts, functional prototypes, and iterative
+            evaluations.
           </p>
 
           <p>
-            I investigate interaction design questions such as:
-            How do designers work with generative AI tools in practice?
-            What limitations do text-centric prompting paradigms create?
-            How can visual and multimodal interactions enable more intuitive control and clearer expression of intent?
+            My research focuses on questions such as: How do designers actually work with generative AI tools in
+            practice? What limitations do text-centric prompting paradigms create? And how can visual and multimodal
+            interactions support more intuitive control and clearer expression of intent?
           </p>
 
           <p>
-            Beyond my dissertation’s focus on design workflows, I am interested in designing
-            <span class="highlight">intuitive and trustworthy AI systems</span> that augment human capabilities and
-            support creativity and expertise.
-            My goal is to develop
-            <span class="highlight">human-centered AI systems grounded in real user needs</span>.
+            Beyond my dissertation’s focus on design workflows, I am interested in building <span
+              class="highlight">intuitive and trustworthy AI systems</span> that augment human capabilities and support
+            creativity and expertise. My goal is to develop <span class="highlight">human-centered AI systems grounded
+              in real user needs</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="what-i-do" class="section section-compact">
+      <div class="container">
+        <h2>What I do</h2>
+        <div class="prose">
+          <p>
+            <span class="highlight">Research</span> — studying how users understand, control, and work with AI systems
+            in real contexts.<br />
+            <span class="highlight">Design</span> — creating intuitive workflows for AI-assisted and multimodal
+            interaction.<br />
+            <span class="highlight">Prototype</span> — building interactive systems to explore, test, and refine ideas
+            in realistic settings.
+          </p>
+
+          <p>
+            My work connects user research, interaction design, and prototyping to make AI systems more understandable,
+            controllable, and useful in practice.
           </p>
         </div>
 
+        <div class="tag-row tag-row-large">
+          <span class="tag">AI-assisted tools</span>
+          <span class="tag">Multimodal interaction</span>
+          <span class="tag">Rapid prototyping</span>
+          <span class="tag">Creative workflows</span>
+          <span class="tag">Human-centered AI experiences</span>
+        </div>
       </div>
     </section>
-    <section id="projects" class="section">
+
+    <!-- <section id="what-i-do" class="section section-compact">
       <div class="container">
-        <h2>Research Projects</h2>
+        <h2>What I do</h2>
+        <div class="prose">
+           <p>
+            I design and study how people interact with AI systems—especially in creative, professional, and multimodal contexts.
+          </p> -->
+    <!-- <p>
+            <span class="highlight">Research</span> — how users understand, control, and collaborate with AI systems.<br />
+            <span class="highlight">Design</span> — intuitive workflows for AI-assisted and multimodal interfaces.<br />
+            <span class="highlight">Prototype</span> — interactive systems to explore, test, and refine design concepts in realistic settings.
+          </p>
+        <p>
+            I connect <strong>research → design → working systems</strong> to create interfaces that help users understand, control, and collaborate with AI.
+        </p> -->
 
-        <div class="project-grid">
 
+    <section id="skills" class="section section-compact">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+
+          <div class="skill-group">
+            <h3>UX Research (Human–AI Systems)</h3>
+            <p><strong>Study design:</strong> Qualitative & quantitative, mixed-methods, controlled experiments</p>
+            <p><strong>Data collection:</strong> Interviews, think-aloud, usability testing, surveys, eye-tracking</p>
+            <p><strong>Analysis:</strong> Thematic analysis, statistical analysis, behavioral measures</p>
+          </div>
+
+          <div class="skill-group">
+            <h3>Interaction Design & Prototyping</h3>
+            <p>Designing workflows and interaction concepts for AI systems</p>
+            <p>Figma, Adobe XD, rapid prototyping</p>
+          </div>
+
+          <div class="skill-group">
+            <h3>Prototyping & Technical Implementation</h3>
+            <p><strong>Frontend:</strong> React, JavaScript, HTML/CSS</p>
+            <p><strong>Backend:</strong> Python, FastAPI, API integration</p>
+            <p>Building interactive prototypes and research systems</p>
+          </div>
+
+          <div class="skill-group">
+            <h3>AI Systems & Generative Models</h3>
+            <p>LLMs, DALL·E, Stable Diffusion, ControlNet, FLUX</p>
+            <p>Designing and evaluating AI-assisted workflows</p>
+          </div>
+
+          <div class="skill-group">
+            <h3>Immersive & 3D Systems</h3>
+            <p>Unity (C#), VR development (Meta Quest, HTC Vive)</p>
+            <p>Interaction design in immersive environments</p>
+          </div>
+
+        </div>
+
+    </section>
+
+    <!-- <section id="projects" class="section">
+      <div class="container">
+        <h2>Selected Work</h2>
+        <p class="section-kicker">Case studies combining UX research, interaction design, and prototyping.</p>
+
+        <div class="project-grid project-grid-home">
           <article class="project-card">
-            <button class="project-thumb" type="button" data-lightbox data-src="assets/projects/park2026enhancing.png"
-              data-alt="Multimodal image refinement interface"
-              aria-label="Open image: Multimodal image refinement interface">
-              <img src="assets/projects/park2026enhancing.png" alt="Multimodal image refinement interface"
-                loading="lazy" />
-            </button>
-
+            <a class="project-thumb" href="project-multimodal-image-refinement.html" aria-label="Open case study: Multimodal Image Refinement">
+              <img src="assets/projects/park2026enhancing.png" alt="Multimodal image refinement interface" loading="lazy" />
+            </a>
             <h3 class="project-title">Multimodal Image Refinement</h3>
-            <p class="project-desc">
-              A comparative study of multimodal prompts—combining text with scribbles and annotations—to support image
-              refinement in generative AI tools.
-            </p>
-
+            <p class="project-desc">Designing and evaluating a multimodal interaction model for refining AI-generated images using text, sketches, and annotations. This project explores how users express intent and control AI outputs beyond text prompting.</p>
             <div class="project-links">
-              <a class="chip chip-blue" href="#pub-iui-2026-scribbles">PDF</a>
-               <a class="chip chip-bib" href="assets/bib/park2026enhancing.bib" download>Bib</a>
-              <a class="chip chip-demo" href="https://youtu.be/yJ7DICAsQHQ" target="_blank" rel="noreferrer">↗ Demo</a>
+              <a class="chip chip-primary" href="project-multimodal-image-refinement.html">View Case Study</a>
+              <a class="chip chip-demo" href="https://youtu.be/yJ7DICAsQHQ" target="_blank" rel="noreferrer">Demo</a>
             </div>
-
             <div class="tag-row">
-              <span class="tag">Multimodal prompting</span>
-              <span class="tag">Comparative study</span>
-              <span class="tag">Visual prompts</span>
-              <span class="tag">Design refinement</span>
+              <span class="tag">Research + Design</span>
+              <span class="tag">AI UX</span>
+              <span class="tag">Multimodal interaction</span>
+              <span class="tag">Prototype + evaluation</span>
             </div>
           </article>
 
-
           <article class="project-card">
-            <button class="project-thumb" type="button" data-lightbox data-src="assets/projects/park2026evaluating.png"
-              data-alt="Evaluation guidelines for interactive GenAI systems"
-              aria-label="Open image: Evaluation guidelines for interactive GenAI systems">
-              <img src="assets/projects/park2026evaluating.png"
-                alt="Evaluation guidelines for interactive GenAI systems" loading="lazy" />
-            </button>
-
-            <h3 class="project-title">Evaluating Interactive GenAI Systems</h3>
-            <p class="project-desc">
-              Methodological guidelines for evaluating interactive generative AI systems in lab-based studies.
-            </p>
-
-            <div class="project-links">
-              <a class="chip chip-blue" href="#pub-iui-2026-eval">PDF</a>
-              <a class="chip chip-bib" href="assets/bib/park2026evaluating.bib" download>Bib</a>
-            </div>
-
-            <div class="tag-row">
-              <span class="tag">Evaluation methods</span>
-              <span class="tag">User studies</span>
-              <span class="tag">Guidelines</span>
-              <span class="tag">Generative AI</span>
-            </div>
-          </article>
-
-
-          <article class="project-card">
-            <button class="project-thumb" type="button" data-lightbox data-src="assets/projects/park2026interaction.png"
-              data-alt="Interaction Methods in Generative AI Image Tools"
-              aria-label="Open image: Interaction Methods in Generative AI Image Tools">
-              <img src="assets/projects/park2026interaction.png" alt="Interaction Methods in Generative AI Image Tools"
-                loading="lazy" />
-            </button>
-
-            <h3 class="project-title">Interaction Methods in Generative AI Image Tools</h3>
-            <p class="project-desc">
-              A review of trends and design opportunities across HCI and industry.
-            </p>
-
-            <div class="project-links">
-              <a class="chip chip-blue" href="#pub-chi-2026-review">PDF</a>
-               <a class="chip chip-bib" href="assets/bib/park2026interaction.bib" download>Bib</a>
-            </div>
-
-            <div class="tag-row">
-              <span class="tag">Generative AI</span>
-              <span class="tag">Interface design</span>
-              <span class="tag">Interaction methods</span>
-              <span class="tag">Creativity support tools</span>
-            </div>
-          </article>
-
-
-          <article class="project-card">
-            <button class="project-thumb" type="button" data-lightbox data-src="assets/projects/park2025design.png"
-              data-alt="Generative AI–driven VR texturing tool"
-              aria-label="Open image: Generative AI–driven VR texturing tool">
-              <img src="assets/projects/park2025design.png" alt="Generative AI–driven VR texturing tool"
-                loading="lazy" />
-            </button>
-
+            <a class="project-thumb" href="project-generative-vr-texturing.html" aria-label="Open case study: Generative VR Texturing Tool">
+              <img src="assets/projects/park2025design.png" alt="Generative VR texturing tool" loading="lazy" />
+            </a>
             <h3 class="project-title">Generative VR Texturing Tool</h3>
-            <p class="project-desc">
-              A research demonstrator integrating diffusion models into VR texturing workflows.
-            </p>
-
+            <p class="project-desc">Designing an immersive AI workflow for generating and applying textures directly in VR environments. The project reduces context switching and supports real-time exploration of AI-generated outputs in 3D.</p>
             <div class="project-links">
-              <a class="chip chip-blue" href="#pub-eics-2025">PDF</a>
-               <a class="chip chip-bib" href="assets/bib/park2025design.bib" download>Bib</a>
-              <a class="chip chip-demo" href="https://youtu.be/qtPi6zQnd5k" target="_blank" rel="noreferrer">↗ Demo</a>
+              <a class="chip chip-primary" href="project-generative-vr-texturing.html">View Case Study</a>
+              <a class="chip chip-demo" href="https://youtu.be/qtPi6zQnd5k" target="_blank" rel="noreferrer">Demo</a>
             </div>
-
             <div class="tag-row">
-              <span class="tag">VR / Unity</span>
-              <span class="tag">Research demonstrator</span>
+              <span class="tag">VR UX</span>
+              <span class="tag">Interaction Design</span>
+              <span class="tag">Prototyping</span>
+              <span class="tag">Creative Workflow</span>
               <span class="tag">Generative AI</span>
             </div>
           </article>
 
-
           <article class="project-card">
-            <button class="project-thumb" type="button" data-lightbox data-src="assets/projects/park2024we.png"
-              data-alt="Professional designers using generative AI image tools"
-              aria-label="Open image: Professional designers using generative AI image tools">
-              <img src="assets/projects/park2024we.png" alt="Professional designers using generative AI image tools"
-                loading="lazy" />
-            </button>
-
-            <h3 class="project-title">Professional Designers &amp; GenAI Image Tools</h3>
-            <p class="project-desc">
-              A thematic analysis of how professional designers use generative AI image tools and the challenges posed
-              by text-centric prompting.
-            </p>
-
+            <a class="project-thumb" href="project-professional-designers-genai-tools.html" aria-label="Open case study: Professional Designers and GenAI Tools">
+              <img src="assets/projects/park2024we.png" alt="Professional designers using generative AI image tools" loading="lazy" />
+            </a>
+            <h3 class="project-title">Professional Designers &amp; GenAI Tools</h3>
+            <p class="project-desc">Studying how professional designers use AI image tools in practice and identifying design opportunities for more intuitive and controllable workflows. This project turns research findings into concrete design direction.</p>
             <div class="project-links">
-              <a class="chip chip-blue" href="#pub-nordichi-2024-visual-thinkers">PDF</a>
-              <a class="chip chip-bib" href="assets/bib/park2024we.bib" download>Bib</a>
+              <a class="chip chip-primary" href="project-professional-designers-genai-tools.html">View Case Study</a>
             </div>
-
             <div class="tag-row">
-              <span class="tag">Thematic analysis</span>
-              <span class="tag">Design practice</span>
-              <span class="tag">GenAI image tools</span>
+              <span class="tag">UX Research</span>
+              <span class="tag">Design insights</span>
+              <span class="tag">AI workflows</span>
             </div>
           </article>
-
 
           <article class="project-card">
-            <button
-              class="project-thumb"
-              type="button"
-              data-lightbox
-              data-src="assets/projects/li2023seatmatevr.png"
-              data-alt="SeatmateVR: proxemic cues for close bystander-awareness in VR"
-              aria-label="Open image: SeatmateVR: proxemic cues for close bystander-awareness in VR"
-            >
-              <img
-                src="assets/projects/li2023seatmatevr.png"
-                alt="SeatmateVR: proxemic cues for close bystander-awareness in VR"
-                loading="lazy"
-              />
-            </button>
-
-            <h3 class="project-title">SeatmateVR</h3>
-
-            <p class="project-desc">
-              Proxemic cues for close bystander-awareness in virtual reality.
-            </p>
-
+            <a class="project-thumb" href="project-seatmatevr.html" aria-label="Open case study: Awareness in VR">
+              <img src="assets/projects/li2023seatmatevr.png" alt="VR awareness system interface" loading="lazy" />
+            </a>
+            <h3 class="project-title">Awareness in VR</h3>
+            <p class="project-desc">Designing subtle awareness cues that help users notice nearby people in VR without breaking immersion. The project balances attention, interruption, and presence through controlled user studies.</p>
             <div class="project-links">
-              <a class="chip chip-blue" href="#pub-seatmatevr">PDF</a>
-              <a class="chip chip-bib" href="assets/bib/li2023seatmatevr.bib" download>Bib</a>
-               <a class="chip chip-demo" href="https://youtu.be/swlowrdgp9o" target="_blank" rel="noreferrer">↗ Demo</a>
+              <a class="chip chip-primary" href="project-seatmatevr.html">View Case Study</a>
             </div>
-
-            <div class="tag-row tag-row--meta" aria-label="Project tags">
-              <span class="tag">VR</span>
-              <span class="tag">Proxemics</span>
-              <span class="tag">Bystander awareness</span>
-              <span class="tag">Interaction design</span>
+            <div class="tag-row">
+              <span class="tag">Research + Design</span>
+              <span class="tag">XR UX</span>
+              <span class="tag">Notification Design</span>
+              <span class="tag">User Study</span>
             </div>
           </article>
-
         </div>
-
-
-
-        <!--<p class="muted small" style="margin-top: 18px;">
-          Tip: keep project cards short and visual. Put details (PDF/DOI/video/demo) in the publication links below.
-        </p>-->
       </div>
-    </section>
-    <section id="publications" class="section">
+    </section> -->
+
+    <!-- <section id="publications-preview" class="section">
       <div class="container">
-        <h2>Publications</h2>
+        <h2>Selected Publications</h2>
+        <p class="section-kicker">Research contributions that inform my design practice in human–AI interaction, multimodal interfaces, and evaluation of AI systems.</p>
 
-        <div class="pub-filters" role="tablist" aria-label="Publication filters">
-          <button class="filter-btn is-active" type="button" data-pub-filter="all" aria-selected="true">All</button>
-          <button class="filter-btn" type="button" data-pub-filter="first" aria-selected="false">First Author</button>
-          <button class="filter-btn" type="button" data-pub-filter="full" aria-selected="false">Full Paper</button>
-          <button class="filter-btn" type="button" data-pub-filter="poster" aria-selected="false">Poster</button>
-          <!--- <button class="filter-btn" type="button" data-pub-filter="preprint" aria-selected="false">Preprint</button> -->
-        </div>
-
-        <p id="pubEmpty" class="muted small" hidden>No publications match this filter.</p>
-
-        <ol class="pubs pubs-flat" aria-label="Publication list">
-          <!-- To enable filtering, each item uses:
-               - data-first="true|false" for first-author filtering
-               - data-type="full|poster|preprint" for type filtering
-               Add links (PDF/DOI/Project) as they become available. -->
-
-          <li id="pub-chi-2026-review" class="pub pub-row" data-pub-item data-type="full" data-first="true">
+        <ol class="pubs pubs-flat pubs-preview" aria-label="Selected publications">
+          <li class="pub pub-row">
             <div class="pub-left">
-              <div class="pub-title">Interaction Methods in Generative AI Image Tools: A Review of Trends and Design
-                Opportunities Across HCI and Industry</div>
-              <div class="pub-authors"><strong>Hyerim Park</strong>, Malin Eiband, Andre Luckow, Michael Sedlmair </div>
-              <div class="pub-actions">
-                  <a class="chip" href="assets/pdf/park2026interaction.pdf" target="_blank" rel="noreferrer">PDF</a>
-                <!--   <a class="chip" href="#" target="_blank" rel="noreferrer">PDF</a>-->
-                <!-- <a class="chip" href="#" target="_blank" rel="noreferrer">DOI</a>-->
-              </div>
+              <div class="pub-title">Enhancing Generative AI Image Refinement with Scribbles and Annotations: A Comparative Study of Multimodal Prompts</div>
+              <div class="pub-authors"><strong>Hyerim Park</strong>, Phuong Thao Tran, Andre Luckow, Ceenu George, Michael Sedlmair, Malin Eiband</div>
+              <div class="pub-actions"><a class="chip" href="https://arxiv.org/pdf/2602.08830" target="_blank" rel="noreferrer">PDF</a></div>
             </div>
-            <div class="pub-right">
-              <div class="pub-venue">CHI 2026</div>
-              <div class="pub-note muted">to appear</div>
-            </div>
+            <div class="pub-right"><div class="pub-venue">IUI 2026</div><div class="pub-note muted">Cyprus</div></div>
           </li>
-
-          <li id="pub-iui-2026-scribbles" class="pub pub-row" data-pub-item data-type="full" data-first="true">
+          <li class="pub pub-row">
             <div class="pub-left">
-              <div class="pub-title">Enhancing Generative AI Image Refinement with Scribbles and Annotations: A
-                Comparative Study of Multimodal Prompts</div>
-              <div class="pub-authors"><strong>Hyerim Park</strong>, Phuong Thao Tran, Andre Luckow, Ceenu George,
-                Michael Sedlmair, Malin Eiband</div>
-              <div class="pub-actions">
-                <a class="chip chip-blue" href="https://arxiv.org/pdf/2602.08830" target="_blank"
-                  rel="noreferrer">PDF</a>
-                <!--  <a class="chip" href="#" target="_blank" rel="noreferrer">DOI</a>-->
-                <!--  <a class="chip" href="#" target="_blank" rel="noreferrer">Project</a>-->
-              </div>
-            </div>
-            <div class="pub-right">
-              <div class="pub-venue">IUI 2026</div>
-              <div class="pub-note muted">to appear</div>
-            </div>
-          </li>
-
-          <li id="pub-iui-2026-eval" class="pub pub-row" data-pub-item data-type="full" data-first="true">
-            <div class="pub-left">
-              <div class="pub-title">Evaluating Generative AI in the Lab: Methodological Challenges and Guidelines</div>
-              <div class="pub-authors"><strong>Hyerim Park</strong>, Khanh Huynh, Malin Eiband, Jeremy Dillmann, Sven
-                Mayer, Michael Sedlmair</div>
-              <div class="pub-actions">
-                <a class="chip chip-blue" href="https://arxiv.org/pdf/2601.16740" target="_blank"
-                  rel="noreferrer">PDF</a>
-              </div>
-            </div>
-            <div class="pub-right">
-              <div class="pub-venue">IUI 2026</div>
-              <div class="pub-note muted">to appear</div>
-            </div>
-          </li>
-          <!-- If you are not first author on this paper, set data-first="false" (default here). -->
-          <li id="pub-chi-ea-2025" class="pub pub-row" data-pub-item data-type="poster" data-first="true">
-            <div class="pub-left">
-              <div class="pub-title">Exploring Visual Prompts: Refining Images with Scribbles and Annotations in
-                Generative AI Image Tools</div>
-              <div class="pub-authors"><strong>Hyerim Park</strong>, Malin Eiband, Andre Luckow, Michael Sedlmair</div>
-              <div class="pub-actions">
-                <a class="chip chip-blue" href="https://visvar.github.io/assets/pdf/park2025exploring.pdf"
-                  target="_blank" rel="noreferrer">PDF</a>
-              </div>
-            </div>
-            <div class="pub-right">
-              <div class="pub-venue">CHI EA 2025</div>
-              <div class="pub-note muted">extended abstract</div>
-            </div>
-          </li>
-          <li id="pub-eics-2025" class="pub pub-row" data-pub-item data-type="full" data-first="true">
-            <div class="pub-left">
-              <div class="pub-title">Design and Evaluation of a Generative AI–Driven VR Texturing Tool: A Design Science
-                Approach</div>
+              <div class="pub-title">Design and Evaluation of a Generative AI–Driven VR Texturing Tool: A Design Science Approach</div>
               <div class="pub-authors"><strong>Hyerim Park</strong>, Joscha Eirich, Andre Luckow, Michael Sedlmair</div>
-              <div class="pub-actions">
-                <a class="chip chip-blue" href="https://aisel.aisnet.org/ecis2025/hci/hci/2/" target="_blank"
-                  rel="noreferrer">PDF</a>
-                <!-- <a class="chip" href="#" target="_blank" rel="noreferrer">Video</a>-->
-              </div>
+              <div class="pub-actions"><a class="chip" href="https://aisel.aisnet.org/ecis2025/hci/hci/2/" target="_blank" rel="noreferrer">PDF</a></div>
             </div>
-            <div class="pub-right">
-              <div class="pub-venue">EICS 2025</div>
-            </div>
+            <div class="pub-right"><div class="pub-venue">EICS 2025</div></div>
           </li>
-          <li id="pub-nordichi-2024-workshop" class="pub pub-row" data-pub-item data-type="poster" data-first="true">
+          <li class="pub pub-row">
             <div class="pub-left">
-              <div class="pub-title">Designing for Visual Thinkers: Overcoming Text-Centric Limitations in GenAI Tools
-              </div>
-              <div class="pub-authors"><strong>Hyerim Park</strong>, Malin Eiband</div>
-              <div class="pub-actions">
-                <a class="chip chip-blue" href="https://visvar.github.io/assets/pdf/park2024designing.pdf"
-                  target="_blank" rel="noreferrer">PDF</a>
-              </div>
-            </div>
-            <div class="pub-right">
-              <div class="pub-venue">NordicCHI 2024</div>
-              <div class="pub-note muted">workshop</div>
-            </div>
-          </li>
-          <li id="pub-nordichi-2024-visual-thinkers" class="pub pub-row" data-pub-item data-type="full"
-            data-first="true">
-            <div class="pub-left">
-              <div class="pub-title">“We Are Visual Thinkers, Not Verbal Thinkers!”: A Thematic Analysis of How
-                Professional Designers Use Generative AI Image Generation Tools</div>
+              <div class="pub-title">“We Are Visual Thinkers, Not Verbal Thinkers!”: A Thematic Analysis of How Professional Designers Use Generative AI Image Generation Tools</div>
               <div class="pub-authors"><strong>Hyerim Park</strong>, Joscha Eirich, Andre Luckow, Michael Sedlmair</div>
-              <div class="pub-actions">
-                <a class="chip chip-blue" href="https://dl.acm.org/doi/pdf/10.1145/3679318.3685370" target="_blank"
-                  rel="noreferrer">PDF</a>
-              </div>
+              <div class="pub-actions"><a class="chip" href="https://dl.acm.org/doi/pdf/10.1145/3679318.3685370" target="_blank" rel="noreferrer">PDF</a></div>
             </div>
-            <div class="pub-right">
-              <div class="pub-venue">NordicCHI 2024</div>
-            </div>
+            <div class="pub-right"><div class="pub-venue">NordiCHI 2024</div></div>
           </li>
-          <li id="pub-seatmatevr" class="pub pub-row" data-pub-item data-type="full" data-first="false">
-            <div class="pub-left">
-              <div class="pub-title">SeatmateVR: Proxemic Cues for Close Bystander-Awareness in Virtual Reality</div>
-              <div class="pub-authors">Jingyi Li, <strong>Hyerim Park</strong>, Robin Welsch, Sven Mayer, Andreas Butz
-              </div>
-              <div class="pub-actions">
-                <a class="chip chip-blue" href="https://dl.acm.org/doi/pdf/10.1145/3626474" target="_blank"
-                  rel="noreferrer">PDF</a>
-              </div>
-            </div>
-            <div class="pub-right">
-              <div class="pub-venue">Proc. ACM HCI (ISS) 2023</div>
-            </div>
-          </li>
-
         </ol>
-      </div>
-    </section>
-    <section id="service" class="section alt">
-      <div class="container">
-        <h2>Academic Service</h2>
-        <div class="grid-2">
-          <div class="panel">
-            <h3 class="panel-title">Program Committee / Associate Chair</h3>
-            <ul class="bullets">
-              <li>C&amp;C 2025</li>
-              <li>MuC 2025 (Short Papers) </li>
-              <li>CHI 2025 (EA)</li>
-            </ul>
-          </div>
 
-          <div class="panel">
-            <h3 class="panel-title">Reviewer</h3>
-            <ul class="bullets">
-              <li>CHI (2025–2026)</li>
-              <li>IUI 2025</li>
-              <li>C&C 2025</li>
-              <li>MuC 2023, 2025</li>
-              <li>MobileHCI 2025</li>
-              <li>DIS 2026</li>
-            </ul>
-          </div>
+        <div class="section-actions">
+          <a class="chip chip-primary" href="publications.html">View all publications</a>
         </div>
       </div>
-    </section>
-
-    <!-- CV section: commented out for now (no file yet).
-         Later, add cv.pdf to the site root and uncomment this block. -->
-    <!--
-    <section id="cv" class="section">
-      <div class="container">
-        <h2>CV</h2>
-        <div class="panel">
-          <p>
-            <a class="btn btn-primary" href="cv.pdf">Download CV (PDF)</a>
-            <span class="muted small">Add <code>cv.pdf</code> to the repository root to make this link work.</span>
-          </p>
-        </div>
-      </div>
-    </section>
-    -->
-    <!--
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <div class="panel">
-          <h3 class="panel-title">Links</h3>
-          <p class="muted">
-            I keep personal details minimal on the public website. The links below are the best way to reach me.
-          </p>
-
-          <p class="contact-line">
-            <span class="muted">Google Scholar</span>
-            <a href="https://scholar.google.com/citations?user=n5RobrsAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">scholar.google.com</a>
-          </p>
-
-          <p class="contact-line">
-            <span class="muted">LinkedIn</span>
-            <a href="https://linkedin.com/in/hpark-hci" target="_blank" rel="noreferrer">linkedin.com/in/hpark-hci</a>
-          </p>
-
-          <p class="contact-line">
-            <span class="muted">Email</span>
-            <button class="linklike" id="copyEmail" type="button" data-email="you@domain.com">Copy email</button>
-        <span class="muted small">(replace <code>data-email</code> in <code>index.html</code>)</span>
-
-          </p>
-
-  Optional:
-          <p class="contact-line">
-            <span class="muted">GitHub</span>
-            <a href="https://github.com/yourname" target="_blank" rel="noreferrer">github.com/yourname</a>
-          </p>
-
-
-          <p class="muted small">
-            If you need a contact form on a static site, you can integrate an external service such as Google Forms or Formspree.
-          </p>
-        </div>
-
-   Keywords (optional): uncomment if you want an ATS/SEO-friendly keyword list.
-        <div class="panel" style="margin-top: 16px;">
-          <h3 class="panel-title">Keywords</h3>
-          <p class="muted small">
-            Example: human–AI interaction, multimodal interaction, generative AI, design practice, evaluation, VR
-          </p>
-          <div class="tags" aria-label="Keyword tags">
-            <span class="tag">Human–AI Interaction</span>
-            <span class="tag">Multimodal</span>
-            <span class="tag">Generative AI</span>
-            <span class="tag">Evaluation</span>
-            <span class="tag">VR</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    -->
+    </section> -->
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="muted small">
-        © <span id="year"></span> Hyerim Park
-      </div>
-      <!--- <div class="muted small">
-        Built with HTML/CSS/JS · Hosted on GitHub Pages
-      </div>-->
+      <div class="muted small">© <span id="year"></span> Hyerim Park</div>
     </div>
   </footer>
 
-  <!-- Image lightbox -->
-  <div id="lightbox" class="lightbox" hidden aria-hidden="true">
-    <div class="lightbox-backdrop" data-lightbox-close></div>
-    <figure class="lightbox-figure" role="dialog" aria-modal="true" aria-label="Expanded project image">
-      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image">✕</button>
-      <img id="lightboxImg" class="lightbox-img" alt="" />
-    </figure>
-  </div>
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      if (toggle) {
+        toggle.addEventListener('click', function () {
+          const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+          const next = current === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) { }
+        });
+      }
 
-  <script src="script.js"></script>
+      document.querySelectorAll('[data-copy]').forEach(function (btn) {
+        btn.addEventListener('click', async function () {
+          const value = btn.getAttribute('data-copy');
+          if (!value) return;
+          try {
+            await navigator.clipboard.writeText(value);
+            btn.classList.add('is-copied');
+            setTimeout(function () { btn.classList.remove('is-copied'); }, 1400);
+          } catch (e) { }
+        });
+      });
+
+      const year = document.getElementById('year');
+      if (year) year.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 
 </html>
