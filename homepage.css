@@ -940,3 +940,116 @@ h2 {
     box-shadow: none;
   }
 }
+/* =========================
+   Resume / CV page
+   ========================= */
+
+.cv-page-section {
+  padding-top: 56px;
+  padding-bottom: 72px;
+}
+
+.cv-page-container {
+  max-width: 880px;
+}
+
+.cv-page-header {
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.cv-page-title {
+  margin: 0;
+  font-size: clamp(34px, 4.4vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.cv-page-intro {
+  margin: 14px 0 0;
+  max-width: 44rem;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.cv-download-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.cv-download-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--panel);
+  padding: 22px 22px 20px;
+  box-shadow: var(--shadow);
+}
+
+.cv-card-kicker {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+.cv-card-title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.cv-card-text {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.cv-download-btn {
+  margin-top: 18px;
+  width: fit-content;
+}
+
+.cv-page-note {
+  margin-top: 22px;
+}
+
+@media (max-width: 760px) {
+  .cv-download-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-page-section {
+    padding-top: 38px;
+    padding-bottom: 56px;
+  }
+}
+
+/* Minimal CV page */
+
+.cv-minimal {
+  padding-top: 64px;
+  padding-bottom: 80px;
+}
+
+.cv-minimal-container {
+  max-width: 640px;
+}
+
+.cv-title {
+  font-size: clamp(36px, 5vw, 56px);
+  margin: 8px 0 24px;
+  letter-spacing: -0.04em;
+}
+
+.cv-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}

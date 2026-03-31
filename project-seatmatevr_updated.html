@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Awareness in VR | Hyerim Park</title>
+
+  <script>
+    (function () {
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) { }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles_case_studies.css" />
+</head>
+
+<body class="page-seatmatevr">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/home.png" alt="" />
+      </a>
+
+      <nav class="nav">
+        <a href="index.html#about">About</a>
+        <a href="/ux">Work</a>
+        <a href="publications.html">Research</a>
+         <a href="cv.html">Resume</a>
+        <!-- <a href="assets/cv/Hyerim_Park_Industry_CV.pdf" target="_blank">Resume</a> -->
+      </nav>
+
+      <button id="themeToggle" class="icon-btn">🌓</button>
+    </div>
+  </header>
+
+  <main id="main" class="case-study-page">
+
+    <!-- HERO -->
+    <section class="case-hero-editorial">
+      <div class="container">
+
+        <a class="case-breadcrumb" href="/ux">← Back to work</a>
+
+        <div class="case-hero-top">
+          <div>
+            <p class="case-kicker">XR UX Case Study</p>
+
+            <h1 class="case-title">Awareness in VR</h1>
+
+            <p class="case-subtitle editorial-subtitle">
+              Designing subtle awareness cues that help VR users notice nearby people without breaking immersion.
+            </p>
+
+            <p class="section-kicker">
+              This project explores how social awareness can be introduced into VR through interaction design,
+              balancing visibility, timing, and immersion.
+            </p>
+          </div>
+
+          <aside class="case-hero-panel">
+            <h2 class="case-panel-title">Project overview</h2>
+
+            <dl class="overview-list">
+              <div class="overview-row">
+                <dt>Role</dt>
+                <dd>Interaction design, prototyping, user study</dd>
+              </div>
+              <div class="overview-row">
+                <dt>Context</dt>
+                <dd>LMU Munich / immersive interaction research</dd>
+              </div>
+              <div class="overview-row">
+                <dt>Timeline</dt>
+                <dd>2023</dd>
+              </div>
+              <div class="overview-row">
+                <dt>Output</dt>
+                <dd>Prototype, controlled study, design guidelines</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+
+        <figure class="case-hero-figure">
+          <img src="assets/projects/seatmateVR/seatmateVR.png" class="case-main-image" />
+          <figcaption class="caption">
+            The final concept combines an in-view cue with spatial guidance so users can notice a nearby person quickly and still locate them.
+          </figcaption>
+        </figure>
+
+        <div class="case-hero-panels">
+          <section class="case-hero-panel case-hero-panel-soft">
+            <p class="eyebrow">Challenge</p>
+            <p>VR users can become disconnected from nearby people. Subtle real-world cues are lost, but still needed.</p>
+          </section>
+
+          <section class="case-hero-panel case-hero-panel-soft">
+            <p class="eyebrow">Contribution</p>
+            <p>I designed and evaluated three awareness concepts balancing visibility, spatial clarity, and immersion.</p>
+          </section>
+
+          <section class="case-hero-panel case-hero-panel-soft">
+            <p class="eyebrow">Research contribution</p>
+            <p>The study shows that a mixed visualization best balances awareness, locating, and immersion.</p>
+          </section>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="section">
+      <div class="container case-grid">
+
+        <aside class="case-sidebar">
+          <div class="panel sticky-panel toc-panel">
+            <p class="eyebrow">On this page</p>
+            <ul class="toc-list">
+              <li><a href="#problem">Problem</a></li>
+              <li><a href="#process">Process</a></li>
+              <li><a href="#concepts">Concepts</a></li>
+              <li><a href="#validation">Validation</a></li>
+              <li><a href="#outcomes">Outcomes</a></li>
+              <li><a href="#reflection">Reflection</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="case-content">
+
+          <!-- PROBLEM -->
+          <section id="problem" class="case-section">
+            <p class="eyebrow">Problem</p>
+            <h2>How do you notice someone nearby without breaking immersion?</h2>
+
+            <p class="case-intro-lead">
+              VR creates immersion by reducing awareness of the physical world. This becomes a UX problem when another
+              person nearby wants to interact.
+            </p>
+
+            <p>
+              Instead of distance, orientation becomes the key signal: people turn toward you before interacting.
+            </p>
+
+            <p class="callout-inline">
+              The challenge: communicate intent early, without disrupting the experience.
+            </p>
+          </section>
+
+          <!-- PROCESS -->
+          <section id="process" class="case-section">
+            <p class="eyebrow">Process</p>
+            <h2>From social cue to interaction design</h2>
+
+            <div class="process-grid">
+              <div class="process-step">
+                <h3>Reframed the problem</h3>
+                <p>Shifted from distance to orientation as the primary signal of intent.</p>
+              </div>
+
+              <div class="process-step">
+                <h3>Explored concepts</h3>
+                <p>Designed three approaches balancing immediacy and spatial clarity.</p>
+              </div>
+
+              <div class="process-step">
+                <h3>Prototyped</h3>
+                <p>Implemented concepts in a VR gameplay scenario.</p>
+              </div>
+
+              <div class="process-step">
+                <h3>Evaluated</h3>
+                <p>Measured awareness, locating, and immersion.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- CONCEPTS -->
+          <section id="concepts" class="case-section">
+            <p class="eyebrow">Concepts</p>
+            <h2>Three approaches</h2>
+
+            <div class="artifact-grid">
+              <div class="artifact-card">
+                <h3>Animoji</h3>
+                <p>Fast awareness through in-view cues.</p>
+              </div>
+
+              <div class="artifact-card">
+                <h3>Avatar</h3>
+                <p>Spatial awareness through location cues.</p>
+              </div>
+
+              <div class="artifact-card">
+                <h3>Mixed</h3>
+                <p>Combines both for best balance.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- VALIDATION -->
+          <section id="validation" class="case-section">
+            <p class="eyebrow">Validation</p>
+            <h2>What worked best</h2>
+
+            <div class="case-two-col">
+              <div class="insight-card">
+                <h3>Fast detection</h3>
+                <p>In-view cues improved reaction time.</p>
+              </div>
+
+              <div class="insight-card">
+                <h3>Better locating</h3>
+                <p>Spatial cues improved understanding of position.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- OUTCOMES -->
+          <section id="outcomes" class="case-section">
+            <p class="eyebrow">Outcomes</p>
+            <h2>Key insight</h2>
+
+            <div class="case-two-col">
+              <div class="insight-card">
+                <h3>Mixed interaction works best</h3>
+                <p>Balances speed and clarity.</p>
+              </div>
+
+              <div class="insight-card">
+                <h3>Awareness should be progressive</h3>
+                <p>Gradual cues outperform sudden alerts.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- REFLECTION -->
+          <section id="reflection" class="case-section">
+            <p class="eyebrow">Reflection</p>
+            <h2>What I learned</h2>
+
+            <p>
+              Awareness is not just visibility—it is timing and progression. The best systems guide users gradually
+              rather than interrupting them.
+            </p>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="muted small">© <span id="year"></span> Hyerim Park</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const btn = document.getElementById("themeToggle");
+
+      btn.addEventListener("click", function () {
+        const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
+  </script>
+
+</body>
+</html>
