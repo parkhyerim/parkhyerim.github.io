@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,7 +13,7 @@
         if (saved === "dark" || saved === "light") {
           document.documentElement.setAttribute("data-theme", saved);
         }
-      } catch (e) {}
+      } catch (e) { }
     })();
   </script>
 
@@ -80,7 +81,7 @@
             root.getAttribute("data-theme") === "dark" ? "dark" : "light";
           const next = current === "dark" ? "light" : "dark";
           root.setAttribute("data-theme", next);
-          try { localStorage.setItem("theme", next); } catch (e) {}
+          try { localStorage.setItem("theme", next); } catch (e) { }
         });
       }
 
@@ -89,4 +90,5 @@
     })();
   </script>
 </body>
+
 </html>

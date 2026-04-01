@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Generative VR Texturing Tool | Hyerim Park</title>
-  <meta name="description" content="Case study: designing an immersive AI workflow for generating, previewing, and applying textures directly on 3D vehicles in VR." />
+  <meta name="description"
+    content="Case study: designing an immersive AI workflow for generating, previewing, and applying textures directly on 3D vehicles in VR." />
   <script>
     (function () {
       try {
@@ -12,11 +14,12 @@
         if (saved === 'dark' || saved === 'light') {
           document.documentElement.setAttribute('data-theme', saved);
         }
-      } catch (e) {}
+      } catch (e) { }
     })();
   </script>
   <link rel="stylesheet" href="styles_case_studies.css" />
 </head>
+
 <body class="page-generative-vr-texturing">
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -26,15 +29,16 @@
         <img class="brand-mark" src="assets/home.png" alt="" aria-hidden="true" />
       </a>
 
-  <nav class="nav" aria-label="Primary navigation">
-    <a href="index.html#about">About</a>
-    <a href="work.html" aria-current="page">Work</a>
-    <a href="publications.html">Research</a>
-     <a href="cv.html">Resume</a>
-    <!-- <a href="assets/cv/cv.pdf" target="_blank" rel="noreferrer">Resume</a> -->
-  </nav>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html#about">About</a>
+        <a href="work.html" aria-current="page">Work</a>
+        <a href="publications.html">Research</a>
+        <a href="cv.html">Resume</a>
+        <!-- <a href="assets/cv/cv.pdf" target="_blank" rel="noreferrer">Resume</a> -->
+      </nav>
 
-      <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme"><span aria-hidden="true">🌓</span></button>
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme"><span
+          aria-hidden="true">🌓</span></button>
     </div>
   </header>
 
@@ -48,46 +52,68 @@
             <p class="case-kicker">AI UX Case Study</p>
             <h1 class="case-title">Generative VR Texturing Tool</h1>
             <p class="case-subtitle editorial-subtitle">
-              Designing an immersive AI workflow for generating, previewing, and applying textures directly on 3D vehicles in VR.
+              Designing an immersive AI workflow for generating, previewing, and applying textures directly on 3D
+              vehicles in VR.
             </p>
           </div>
 
           <aside class="case-hero-panel">
             <h2 class="case-panel-title">Project overview</h2>
             <dl class="overview-list">
-              <div class="overview-row"><dt><a href="#my-role">Role</a></dt><dd>Interaction design, prototyping, Unity implementation</dd></div>
-              <div class="overview-row"><dt><a href="#users-context">Context</a></dt><dd>BMW Group / University of Stuttgart</dd></div>
-              <div class="overview-row"><dt><a href="#process">Timeline</a></dt><dd>2023–2025</dd></div>
-              <div class="overview-row"><dt><a href="#final-solution">Output</a></dt><dd>VR prototype, user evaluation, design recommendations</dd></div>
+              <div class="overview-row">
+                <dt><a href="#my-role">Role</a></dt>
+                <dd>Interaction design, prototyping, Unity implementation</dd>
+              </div>
+              <div class="overview-row">
+                <dt><a href="#users-context">Context</a></dt>
+                <dd>BMW Group / University of Stuttgart</dd>
+              </div>
+              <div class="overview-row">
+                <dt><a href="#process">Timeline</a></dt>
+                <dd>2023–2025</dd>
+              </div>
+              <div class="overview-row">
+                <dt><a href="#final-solution">Output</a></dt>
+                <dd>VR prototype, user evaluation, design recommendations</dd>
+              </div>
             </dl>
           </aside>
         </div>
 
         <figure class="case-hero-figure">
-          <img src="assets/projects/park2025design.png" alt="Immersive VR workflow showing AI-generated textures projected onto a 3D car model" class="case-main-image" />
-          <figcaption class="caption">GenVRTex keeps texture generation and evaluation inside the immersive environment instead of pushing users back to desktop tools.</figcaption>
+          <img src="assets/projects/park2025design.png"
+            alt="Immersive VR workflow showing AI-generated textures projected onto a 3D car model"
+            class="case-main-image" />
+          <figcaption class="caption">GenVRTex keeps texture generation and evaluation inside the immersive environment
+            instead of pushing users back to desktop tools.</figcaption>
         </figure>
 
         <div class="case-hero-panels">
           <section id="challenge" class="case-hero-panel case-hero-panel-soft">
             <p class="eyebrow">Challenge</p>
-            <p>Most AI image tools assume a desktop workflow. In VR, that breaks immersion, separates generation from 3D context, and makes texture exploration harder for users who are new to texturing or prompt-based tools.</p>
+            <p>Most AI image tools assume a desktop workflow. In VR, that breaks immersion, separates generation from 3D
+              context, and makes texture exploration harder for users who are new to texturing or prompt-based tools.
+            </p>
           </section>
 
           <section id="contribution" class="case-hero-panel case-hero-panel-soft">
             <p class="eyebrow">Contribution</p>
-            <p>I designed a VR workflow that combines prompt input, sketching, in-context texture preview, and output management so novice users can explore surface designs more fluidly inside immersive space.</p>
+            <p>I designed a VR workflow that combines prompt input, sketching, in-context texture preview, and output
+              management so novice users can explore surface designs more fluidly inside immersive space.</p>
           </section>
 
           <section class="case-hero-panel case-hero-panel-soft">
             <p class="eyebrow">Research contribution</p>
-            <p>Developed through a design science approach and evaluated with novice automotive designers, this project turned immersive workflow pain points into concrete interaction requirements for AI-supported VR creation.</p>
+            <p>Developed through a design science approach and evaluated with novice automotive designers, this project
+              turned immersive workflow pain points into concrete interaction requirements for AI-supported VR creation.
+            </p>
           </section>
         </div>
 
         <div class="project-links case-links editorial-links">
           <a class="chip chip-demo" href="https://youtu.be/qtPi6zQnd5k" target="_blank" rel="noreferrer">Watch demo</a>
-          <a class="chip chip-blue" href="https://aisel.aisnet.org/ecis2025/hci/hci/2/" target="_blank" rel="noreferrer">Read paper</a>
+          <a class="chip chip-blue" href="https://aisel.aisnet.org/ecis2025/hci/hci/2/" target="_blank"
+            rel="noreferrer">Read paper</a>
         </div>
       </div>
     </section>
@@ -115,31 +141,43 @@
           <section class="case-section" id="problem">
             <p class="eyebrow">Problem</p>
             <p class="case-intro-lead">
-              Texture design in 3D is highly contextual. Users need to see materials on form, compare alternatives in place, and keep momentum while exploring. Existing AI image tools can generate textures, but they usually live outside VR and require users to switch workflows, import static outputs, and judge results away from the object they are designing.
+              Texture design in 3D is highly contextual. Users need to see materials on form, compare alternatives in
+              place, and keep momentum while exploring. Existing AI image tools can generate textures, but they usually
+              live outside VR and require users to switch workflows, import static outputs, and judge results away from
+              the object they are designing.
             </p>
             <div class="issue-grid case-two-col">
               <div class="insight-card compact-card">
                 <h3>Desktop handoffs break creative flow</h3>
-                <p>Generating textures outside VR interrupts immersive work and forces users to mentally translate between 2D tools and 3D results.</p>
+                <p>Generating textures outside VR interrupts immersive work and forces users to mentally translate
+                  between 2D tools and 3D results.</p>
               </div>
               <div class="insight-card compact-card">
                 <h3>Novices need lower-friction creation tools</h3>
-                <p>Traditional texture tools require expert knowledge, while pre-made skins limit expression and do not support personal customization.</p>
+                <p>Traditional texture tools require expert knowledge, while pre-made skins limit expression and do not
+                  support personal customization.</p>
               </div>
             </div>
-            <p class="callout-inline">The design opportunity was not just to generate textures in VR, but to make generation usable as part of an immersive comparison-and-refinement loop.</p>
+            <p class="callout-inline">The design opportunity was not just to generate textures in VR, but to make
+              generation usable as part of an immersive comparison-and-refinement loop.</p>
           </section>
 
           <section id="users-context" class="case-section">
             <p class="eyebrow">Users and context</p>
             <h2>Designing for novice creators in immersive automotive customization</h2>
-            <p>This project focused on users who are comfortable with design thinking but unfamiliar with VR texturing or prompt-heavy AI workflows. In automotive settings, surface design decisions depend on scale, curvature, and context, so textures need to be evaluated directly on the vehicle rather than as detached 2D images.</p>
+            <p>This project focused on users who are comfortable with design thinking but unfamiliar with VR texturing
+              or prompt-heavy AI workflows. In automotive settings, surface design decisions depend on scale, curvature,
+              and context, so textures need to be evaluated directly on the vehicle rather than as detached 2D images.
+            </p>
           </section>
 
           <section id="my-role" class="case-section">
             <p class="eyebrow">My role</p>
             <h2>I translated novice user needs into an immersive interaction model</h2>
-            <p>I defined the UX opportunity, shaped the interaction direction, built the prototype in Unity, and translated evaluation findings into design recommendations for GenAI tools in VR. My work focused on how users enter prompts, sketch textures, preview results, and manage iterations without losing spatial context.</p>
+            <p>I defined the UX opportunity, shaped the interaction direction, built the prototype in Unity, and
+              translated evaluation findings into design recommendations for GenAI tools in VR. My work focused on how
+              users enter prompts, sketch textures, preview results, and manage iterations without losing spatial
+              context.</p>
           </section>
 
           <section id="process" class="case-section">
@@ -149,22 +187,26 @@
               <div class="process-step">
                 <p class="eyebrow">01 · Understand</p>
                 <h3>Mapped the friction in existing workflows</h3>
-                <p>I examined why current texturing and GenAI workflows were hard for novices: too much tool switching, too much text entry, and too little in-context feedback.</p>
+                <p>I examined why current texturing and GenAI workflows were hard for novices: too much tool switching,
+                  too much text entry, and too little in-context feedback.</p>
               </div>
               <div class="process-step">
                 <p class="eyebrow">02 · Define</p>
                 <h3>Established the design direction</h3>
-                <p>I shaped the experience around multimodal input, direct interaction with 3D objects, in-context texture preview, and support for iterative exploration rather than one-shot generation.</p>
+                <p>I shaped the experience around multimodal input, direct interaction with 3D objects, in-context
+                  texture preview, and support for iterative exploration rather than one-shot generation.</p>
               </div>
               <div class="process-step">
                 <p class="eyebrow">03 · Prototype</p>
                 <h3>Built GenVRTex in Unity</h3>
-                <p>I implemented a working VR system that supports voice and keyboard prompt entry, sketching on 3D objects and a 2D canvas, history management, and texture positioning controls.</p>
+                <p>I implemented a working VR system that supports voice and keyboard prompt entry, sketching on 3D
+                  objects and a 2D canvas, history management, and texture positioning controls.</p>
               </div>
               <div class="process-step">
                 <p class="eyebrow">04 · Validate</p>
                 <h3>Tested the workflow with novice users</h3>
-                <p>I evaluated how nine designers with limited VR texturing experience used the system, what felt intuitive, and where the interaction still needed refinement.</p>
+                <p>I evaluated how nine designers with limited VR texturing experience used the system, what felt
+                  intuitive, and where the interaction still needed refinement.</p>
               </div>
             </div>
           </section>
@@ -173,22 +215,28 @@
             <p class="eyebrow">Final solution</p>
             <h2>An immersive workflow for generating, previewing, and adjusting textures</h2>
             <figure class="solution-figure">
-              <img src="assets/projects/genvrtex-ui-overview.jpg" alt="Annotated overview of the GenVRTex interface showing prompt input, image panel, advanced menu, canvas, and texture adjustment controls" class="solution-image" />
-              <figcaption class="caption">The interface combines prompt entry, image management, sketching, and in-context texture controls in one VR workspace.</figcaption>
+              <img src="assets/projects/genvrtex-ui-overview.jpg"
+                alt="Annotated overview of the GenVRTex interface showing prompt input, image panel, advanced menu, canvas, and texture adjustment controls"
+                class="solution-image" />
+              <figcaption class="caption">The interface combines prompt entry, image management, sketching, and
+                in-context texture controls in one VR workspace.</figcaption>
             </figure>
 
             <div class="artifact-grid">
               <div class="artifact-card">
                 <h3>Multimodal prompt entry</h3>
-                <p>Users can enter prompts via voice or virtual keyboard and combine text with sketches, reducing dependence on a single input method.</p>
+                <p>Users can enter prompts via voice or virtual keyboard and combine text with sketches, reducing
+                  dependence on a single input method.</p>
               </div>
               <div class="artifact-card">
                 <h3>In-context texture preview</h3>
-                <p>Generated textures can be projected directly onto the 3D vehicle, making it easier to judge fit, scale, and overall direction in place.</p>
+                <p>Generated textures can be projected directly onto the 3D vehicle, making it easier to judge fit,
+                  scale, and overall direction in place.</p>
               </div>
               <div class="artifact-card">
                 <h3>Iterative output management</h3>
-                <p>Users can browse, favorite, revisit, and generate variations from previous results instead of restarting from scratch each time.</p>
+                <p>Users can browse, favorite, revisit, and generate variations from previous results instead of
+                  restarting from scratch each time.</p>
               </div>
             </div>
           </section>
@@ -199,23 +247,28 @@
             <div class="decision-list uniform-decision-list">
               <div class="decision-item">
                 <h3>1. Keep creation inside VR</h3>
-                <p>The workflow avoids unnecessary handoffs to desktop tools so users can evaluate textures where they matter: on the 3D object, at immersive scale.</p>
+                <p>The workflow avoids unnecessary handoffs to desktop tools so users can evaluate textures where they
+                  matter: on the 3D object, at immersive scale.</p>
               </div>
               <div class="decision-item">
                 <h3>2. Support multiple input paths for novices</h3>
-                <p>Because VR text entry is demanding, the system offers voice, keyboard, and sketch-based input so users can choose the method that feels most accessible in the moment.</p>
+                <p>Because VR text entry is demanding, the system offers voice, keyboard, and sketch-based input so
+                  users can choose the method that feels most accessible in the moment.</p>
               </div>
               <div class="decision-item">
                 <h3>3. Treat generation as iterative exploration</h3>
-                <p>History, favorites, and variation workflows make generation part of an ongoing design loop rather than a one-time command.</p>
+                <p>History, favorites, and variation workflows make generation part of an ongoing design loop rather
+                  than a one-time command.</p>
               </div>
               <div class="decision-item">
                 <h3>4. Add lightweight prompt assistance</h3>
-                <p>Predefined styles and LLM-based prompt refinement help novice users get started without demanding expert prompt-writing skills.</p>
+                <p>Predefined styles and LLM-based prompt refinement help novice users get started without demanding
+                  expert prompt-writing skills.</p>
               </div>
               <div class="decision-item">
                 <h3>5. Preserve spatial adjustment after generation</h3>
-                <p>Texture movement and rotation controls let users refine fit on the object without regenerating everything, which is especially important on curved surfaces.</p>
+                <p>Texture movement and rotation controls let users refine fit on the object without regenerating
+                  everything, which is especially important on curved surfaces.</p>
               </div>
             </div>
           </section>
@@ -223,24 +276,30 @@
           <section id="validation" class="case-section">
             <p class="eyebrow">Validation</p>
             <h2>What validation showed</h2>
-            <p>I evaluated the prototype with nine automotive designers who had limited experience with VR texturing or GenAI tools. The study focused on usability, input preferences, prompt creation, and how well the workflow supported iterative exploration.</p>
+            <p>I evaluated the prototype with nine automotive designers who had limited experience with VR texturing or
+              GenAI tools. The study focused on usability, input preferences, prompt creation, and how well the workflow
+              supported iterative exploration.</p>
 
             <div class="validation-summary-grid">
               <div class="insight-card">
                 <h3>Voice was preferred for speed</h3>
-                <p>Participants found speech faster and less physically demanding than virtual keyboard input, while still valuing keyboard entry for privacy and precise editing.</p>
+                <p>Participants found speech faster and less physically demanding than virtual keyboard input, while
+                  still valuing keyboard entry for privacy and precise editing.</p>
               </div>
               <div class="insight-card">
                 <h3>Drawing was promising but harder to control</h3>
-                <p>Sketching directly in VR supported visual thinking, but novice users needed better spatial navigation and more precise drawing controls.</p>
+                <p>Sketching directly in VR supported visual thinking, but novice users needed better spatial navigation
+                  and more precise drawing controls.</p>
               </div>
               <div class="insight-card">
                 <h3>Output history mattered</h3>
-                <p>Participants valued being able to revisit and branch from previous generations, which supported a more iterative and less frustrating workflow.</p>
+                <p>Participants valued being able to revisit and branch from previous generations, which supported a
+                  more iterative and less frustrating workflow.</p>
               </div>
               <div class="insight-card">
                 <h3>Curved surfaces changed the design constraints</h3>
-                <p>Large single images often distorted on car geometry, so repeated patterns and post-generation adjustment controls became especially important.</p>
+                <p>Large single images often distorted on car geometry, so repeated patterns and post-generation
+                  adjustment controls became especially important.</p>
               </div>
             </div>
           </section>
@@ -251,19 +310,23 @@
             <div class="case-two-col">
               <div class="insight-card">
                 <h3>Workflow fit matters as much as model capability</h3>
-                <p>AI generation becomes more useful when it is embedded in the user’s spatial task rather than treated as a detached image-generation step.</p>
+                <p>AI generation becomes more useful when it is embedded in the user’s spatial task rather than treated
+                  as a detached image-generation step.</p>
               </div>
               <div class="insight-card">
                 <h3>Immersive context improves evaluation</h3>
-                <p>Previewing textures directly on a vehicle supports better judgment than evaluating outputs outside VR and applying them later.</p>
+                <p>Previewing textures directly on a vehicle supports better judgment than evaluating outputs outside VR
+                  and applying them later.</p>
               </div>
               <div class="insight-card">
                 <h3>Multimodal input lowers the barrier for novices</h3>
-                <p>Offering voice, keyboard, and sketching gives users more ways to express intent and reduces reliance on expert-level prompting.</p>
+                <p>Offering voice, keyboard, and sketching gives users more ways to express intent and reduces reliance
+                  on expert-level prompting.</p>
               </div>
               <div class="insight-card">
                 <h3>Iteration needs stronger support in VR</h3>
-                <p>The study highlighted next steps around smoother input transitions, better output management, and more precise texture control on complex surfaces.</p>
+                <p>The study highlighted next steps around smoother input transitions, better output management, and
+                  more precise texture control on complex surfaces.</p>
               </div>
             </div>
           </section>
@@ -271,7 +334,9 @@
           <section id="reflection" class="case-section">
             <p class="eyebrow">Reflection</p>
             <h2>Designing AI for VR means designing around context, not only commands</h2>
-            <p>This project reinforced that immersive AI tools should be designed around the way users inspect, compare, and refine work in space. The most important challenge was not only generating images, but helping users move between intent, output, and evaluation without leaving the environment where decisions are made.</p>
+            <p>This project reinforced that immersive AI tools should be designed around the way users inspect, compare,
+              and refine work in space. The most important challenge was not only generating images, but helping users
+              move between intent, output, and evaluation without leaving the environment where decisions are made.</p>
           </section>
         </div>
       </div>
@@ -347,4 +412,5 @@
   </script>
 </body>
 </body>
+
 </html>
